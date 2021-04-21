@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  background: #77D0DB;
+  border-radius: 16px;
+  pverflow-x: hidden;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  border: none;
+}
+/* Creating device-like shape where content exists */
+.app::after {
+  content: '';
+  display: block;
+  padding-top: calc(100% / (3/5)); 
+}
+
+.calculator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #F17656;
+  padding: 10px 15px;
+  box-sh0px: 3px 12px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #FFF;
+    font-size: 24px;
+    text-align: center;
+}
+
+main {
+  flex: 1 1 100%;
+  overflow-y: scroll;
+  padding: 20px 15px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Dollar sign before bill amnt styling */
+.pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  color: #F3F0F3;
+  font-size: 18px;
+  border-bottom: 3px solid #484E5B;
+  background: #484E5B;
+  border-radius: 8px 0px 0px 0px;
+}
+
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border-bottom: 3px solid #484E5B;
+  color: #212121;
+  font-size: 18px;
+}
+
+/* placeholder text */
+input::after {
+  color: #666;
+  font-size: 14px;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance:  none;
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid #484E5B;
+  border-radius: 0px;
+  color: #212121;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+/* Tip placement */
+.tip-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  
+.tip-wrap p {
+  color: #212121;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.tip {
+  padding: 15px 25px;
+  box-shadow: 0px 0px 6px rbga(0,0,0,0.2);
+}
+
+/* where tip button lives */
+footer {
+  box-shadow: 0px -3px 12px rgba(0,0,0,0.2);
+  background-color: #484E5B;
+}
+
+.tipBtn {
+  display: block;
+  width: 200px;
+  padding: 10px 15px;
+  appearance: none;
+  border: none;
+  border-radius: 25px;
+  margin-left: 18%;
+  margin-right: 20%;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #F3F0F3;
+  color: #212121;
+}
+
+.bkgBtn {
+  width:  60px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FFFCBD;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bkgBtn:hover {
+  background-color: #FFF;
+}
+
+.bkgBtnSec {
+  background-color: #F1C978;
+  border:none;
+  padding: 10px;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
